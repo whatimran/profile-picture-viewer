@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Picture Viewer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 280px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1c1e21;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .header img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .header h1 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .header p {
+      font-size: 11px;
+      color: #65676b;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      background: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      text-align: center;
+    }
+    .btn:hover {
+      background: #166fe5;
+    }
+    .btn:active {
+      background: #1460c7;
+    }
+    .btn:disabled {
+      background: #bcc0c4;
+      cursor: not-allowed;
+    }
+    .status {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #65676b;
+      text-align: center;
+      min-height: 18px;
+    }
+    .status.error {
+      color: #e41e3f;
+    }
+    .status.success {
+      color: #31a24c;
+    }
+    .credits {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid #ccd0d5;
+      text-align: center;
+      font-size: 12px;
+      color: #65676b;
+    }
+    .credits a {
+      color: #1877f2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .credits a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/48.png" alt="icon">
+    <div>
+      <h1>Profile Picture Viewer</h1>
+      <p>Facebook full-size photo</p>
+    </div>
+  </div>
+
+  <button id="viewBtn" class="btn">View Full Size Photo</button>
+  <div id="status" class="status"></div>
+
+  <div class="credits">
+    Made by <a href="https://imranshah.netlify.app/" target="_blank">Imran</a><br>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
